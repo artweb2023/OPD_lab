@@ -1,0 +1,9 @@
+# Папки
+CMakeFiles/
+
+
+# Файлы
+*.cmake
+CMakeCache.txt
+Makefile
+00
