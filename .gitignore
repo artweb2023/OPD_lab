@@ -1,6 +1,6 @@
 # Папки
 CMakeFiles/
-
+.vscode/
 
 # Файлы
 *.cmake
