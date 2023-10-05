@@ -1,6 +1,7 @@
 # Папки
 CMakeFiles/
 .vscode/
+main.dSYM/
 
 # Файлы
 *.cmake
