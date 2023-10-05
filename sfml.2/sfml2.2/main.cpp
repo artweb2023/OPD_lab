@@ -18,6 +18,7 @@ int main()
     rose.setPointCount(pointCount);
 
     sf::Vector2f position(400, 200);
+    sf::Clock clock;
     float angle = 0;
     while (window.isOpen())
     {
@@ -32,15 +33,16 @@ int main()
         for (int pointNo = 0; pointNo < pointCount; pointNo++)
         {
             float angle = float(2 * M_PI * pointNo) / float(pointCount);
-            float radius = 100 * sin(6 * angle);
+            float radius = 200 * sin(6 * angle);
             sf::Vector2f point(
                 radius * std::sin(angle),
                 radius * std::cos(angle));
             rose.setPoint(pointNo, point);
         }
+        float deltaTime = clock.restart().asSeconds();
         angle += 0.01;
-        position.x = position.x + std::cos(angle);
-        position.y = position.y + std::sin(angle);
+        position.x += deltaTime + std::cos(angle);
+        position.y += std::sin(angle);
         rose.setPosition(position);
 
         window.clear();
