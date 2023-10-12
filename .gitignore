@@ -7,3 +7,4 @@ main.dSYM/
 *.cmake
 CMakeCache.txt
 Makefile
+.gitignore
