@@ -107,8 +107,8 @@ int main()
     init(pointer);
     while (window.isOpen())
     {
-        pollEvents(window, mousePosition);
         float deltaTime = clock.restart().asSeconds();
+        pollEvents(window, mousePosition);
         update(mousePosition, pointer, deltaTime);
         redrawFrame(window, pointer);
     }
