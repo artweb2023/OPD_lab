@@ -63,7 +63,7 @@ void update(const sf::Vector2f &mousePosition, sf::ConvexShape &arrow, float &de
     float angle = atan2(delta.y, delta.x);
     sf::Vector2f direction = (delta / hypotf(delta.x, delta.y));
     float speed = 20.f;
-    if (delta.x != 0.f && delta.y != 0.f)
+    if ((delta.x && delta.y) != 0.f)
     {
         arrow.setPosition(arrow.getPosition() + direction * deltaTime * speed);
     }
