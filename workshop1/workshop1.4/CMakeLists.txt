@@ -1,4 +1,4 @@
-add_executable(03 main.cpp)
+add_executable(04 main.cpp)
 
 # Настройка пути к компилятору LLVM/Clang
 set(CMAKE_C_COMPILER "/usr/local/opt/llvm/bin/clang")
@@ -13,8 +13,8 @@ find_package(JPEG)
 find_package(SFML 2.5 COMPONENTS graphics REQUIRED)
 
 
-target_include_directories(03 PRIVATE ${SFML_INCLUDE_DIR})
-target_compile_features(03 PUBLIC cxx_std_17)
-target_compile_definitions(03 PRIVATE SFML_STATIC)
+target_include_directories(04 PRIVATE ${SFML_INCLUDE_DIR})
+target_compile_features(04 PUBLIC cxx_std_17)
+target_compile_definitions(04 PRIVATE SFML_STATIC)
 
-target_link_libraries(03 PRIVATE sfml-graphics)
+target_link_libraries(04 PRIVATE sfml-graphics)
